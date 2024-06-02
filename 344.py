@@ -29,6 +29,7 @@ class Solution(object):
         :type s: List[str]
         :rtype: None Do not return anything, modify s in-place instead.
         """
+        print("REVERSE STRING BRUTE FORCE APPROACH")
         j = len(s)-1
         for i in range((len(s)+1)//2):
             temp = s[i]
