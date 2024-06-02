@@ -23,6 +23,10 @@ Constraints:
 1 <= s.length <= 105
 s[i] is a printable ascii character '''
 
+'''I] APPROACH 1:
+INDEX SWAP
+'''
+
 class Solution(object):
     def reverseString(self, s):
         """
@@ -31,11 +35,23 @@ class Solution(object):
         """
         print("REVERSE STRING BRUTE FORCE APPROACH")
         j = len(s)-1
-        for i in range((len(s)+1)//2):
+        for i in range(len(s)//2):
             temp = s[i]
             s[i] = s[j]
             s[j] = temp
             j -= 1
-        
+
+
+'''II] APPROACH 2:
+USING SLICING '''
+
+class Solution(object):
+    def reverseString(self, s):
+        """
+        :type s: List[str]
+        :rtype: None Do not return anything, modify s in-place instead.
+        """
+        s[:] = s[::-1]
+
 
         
